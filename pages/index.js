@@ -31,6 +31,10 @@ export default function Home() {
           <p>Parameters (body params): id(uuid), isDone(bool)</p>
         </li>
         <li>
+          <p>POST /api/todo/UpdateName</p>
+          <p>Parameters (body params): id(uuid), name(string)</p>
+        </li>
+        <li>
           <p>DELETE /api/todo/delete</p>
           <p>Parameters (query params): id(uuid)</p>
         </li>

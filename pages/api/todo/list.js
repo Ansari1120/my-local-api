@@ -50,6 +50,23 @@ export const updateTodo = ({ id, isDone }) => {
   todos = newTodos;
 };
 
+export const updateTodoName = ({ id, name }) => {
+  // only isDone can be updated atm
+  let newTodos = [];
+  todos.map((obj) => {
+    let newTodo = { ...obj };
+    if (obj.id == id) {
+      newTodo = {
+        id: obj.id,
+        name,
+        isDone: false,
+      };
+    }
+    newTodos.push(newTodo);
+  });
+  todos = [...newTodos];
+};
+
 export default function handler(req, res) {
   res.status(200).json({ todos });
 }
